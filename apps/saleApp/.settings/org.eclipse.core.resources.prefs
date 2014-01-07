@@ -1,4 +1,4 @@
-#Tue Jan 07 11:27:54 ICT 2014
+#Tue Jan 07 14:49:18 ICT 2014
 base.iphone=4155040770
 saleApp.iphone.native=4155040770
 base.android=200347496
@@ -18,5 +18,5 @@ fipshttp.ipad=1366853547
 wl_compatible_version=
 saleApp.ipad.native=4155040770
 base.ipad=4155040770
-analytics.android=2195365451
 analytics.iphone=3764441202
+analytics.android=2195365451

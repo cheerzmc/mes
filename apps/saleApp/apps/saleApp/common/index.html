@@ -22,33 +22,18 @@
     		<link rel="stylesheet" href="css/main.css">
     		<link rel="stylesheet" href="jqueryMobile/jquery.mobile.icons-1.4.0.css">
     		<link rel="stylesheet" href="jqueryMobile/jquery.mobile.icons-1.4.0.min.css">
-    		
     		<script>window.$ = window.jQuery = WLJQ;</script>
     		<script src="jqueryMobile/jquery.mobile-1.4.0.js"></script>
     		<script src="jqueryMobile/jquery.mobile-1.4.0.min.js"></script>
-			<script type="text/javascript" src="dojox/mobile/deviceTheme.js"></script>
-			<script type="text/javascript"
+<script type="text/javascript" src="dojox/mobile/deviceTheme.js"></script>
+<script type="text/javascript"
 	data-dojo-config="isDebug: false, async: true, parseOnLoad: true, mblHideAddressBar: false"
 	src="dojo/dojo.js"></script>
-	<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
 </head>
-    	<body>
-    	
-    	
-    		<div data-role="page" id="home">
-				<div data-role="header" id="header" data-position="fixed">
-					<h3>Sale Activity App</h3>
-				</div>
-				<div data-role="content" style="padding: 15px">
-					<a href="#appoint1" data-role="button" id="button">Appointment</a><a href="#Order"
-					data-role="button" id="button0">Order</a>
-					<!--application UI goes here-->	
-    			</div>
-    		</div>
-    		
+    	<body style="display: none;">
 	<div data-role="page" id="appoint1">
 		<div data-role="header" id="header0" data-position="fixed">
-			<a href="#home" data-role="button" id="button1">Home</a>
 			<h3>Appointment</h3>
 		</div>
 		<div data-role="content" style="padding: 15px">
@@ -60,6 +45,8 @@
 			</ul>
 		</div>
 	</div>
+	
+	
 	<div data-role="page" id="appoint2">
 		<div data-role="header" id="header1" data-position="fixed">
 			<a href="#appoint1" data-role="button" id="button2">Back</a>
@@ -76,10 +63,10 @@
 			<div data-role="content" id="pageContent2">Description:
 				<textarea id="textarea" readonly>Meeting Customer 1</textarea>
 			</div>
-			<a href="#" data-role="button" id="button4">Check-in</a>
+			<a href="#Order" data-role="button" id="button4">Check-in</a>
 		</div>
 	</div>
-	<div data-role="dialog" id="dialog_ch">
+	<div data-role="popup" id="popup1">
 		<div data-role="header" id="header6">
 			<h3>Discount Warning!!!</h3>
 		</div>
@@ -103,37 +90,26 @@
 		</div>
 		<div data-role="content" style="padding: 15px">
 			<label for="text">Order No.:</label><input type="text" name="text"
-				id="text" readonly value="ORD2345"><label for="text0">Customer No.:</label><input type="text" name="text0" id="text0"><label
+				id="text" readonly value="ORD23456"><label for="text0">Customer No.:</label><input type="text" name="text0" id="text0" value="CUST01"><label
 				for="text1">Customer Name:</label><input type="text" name="text1"
-				id="text1"><label for="text2">Product ID:</label><input type="text"
-				name="text2" id="text2"> 
+				id="text1" value="Customer 01"><label for="text2">Product ID:</label><input type="text"
+				name="text2" id="text2" value="PROD01"> 
 				<label id="label2">Product name:</label> <select>
-				<option selected value="CISCO">CISCO</option>
+				<option  value="CISCO">CISCO</option>
 				<option value="ORACLE">ORACLE</option>
-				<option value="IBM">IBM</option>
+				<option selected value="IBM">IBM</option>
 				<option value="Microsoft">Microsoft</option>
 			</select>
 			<label for="text3">Price/Unit:</label><input type="text"
-				name="text3" id="text3" readonly><label for="text4">Cost/Unit:</label><input type="text" name="text4" id="text4">
-				<div class="ui-grid-b">
-				<div class="ui-block-a">
-					<label id="label3">Qty:</label>
-				</div>
-				<div class="ui-block-b"><div data-dojo-type="dojox.mobile.ValuePickerSlot"></div></div>
-				<div class="ui-block-c">
-					<div data-dojo-type="dojox.mobile.ValuePickerSlot"></div>
-				</div>
-			</div>
-			<div data-dojo-type="dojox.mobile.ValuePicker">
+				name="text3" id="text3" readonly value="1 M"><label for="text7">Qty:</label><input type="text" name="text7" id="text7" value="1"><label for="text4">Cost/Unit:</label><input type="text" name="text4" id="text4" value="800000">
 				
-			</div>
 			<label
 				for="text5">Discount:</label><input type="text" name="text5"
-				id="text5"><label for="text6">Total Cost:</label><input type="text"
-				name="text6" id="text6" readonly>
+				id="text5" value="20"><label for="text6">Total Cost:</label><input type="text"
+				name="text6" id="text6" readonly value="800000">
 			<div class="ui-grid-a">
 				<div class="ui-block-a">
-					<a href="#dialog_ch (dialog)" data-role="button" id="button15">Submit</a>
+					<a href="#popup1" data-role="button" id="button15">Submit</a>
 				</div>
 				<div class="ui-block-b">
 					<a href="#" data-role="button" id="button16">Cancel</a>
@@ -147,9 +123,9 @@
 		</div>
 		<div data-role="content" style="padding: 15px">
 			<label for="text">Order No.:</label><input type="text" name="text"
-				id="text" readonly value="ORD2345"><label for="text0">Customer No.:</label><input type="text" name="text0" id="text0" value="CUST01"><label
+				id="text" readonly value="ORD2345"><label for="text0">Customer No.:</label><input type="text" name="text0" id="text0" value="CUST01" readonly><label
 				for="text1">Customer Name:</label><input type="text" name="text1"
-				id="text1" value="Customer 01"><label for="text2">Product ID:</label><input type="text"
+				id="text1" value="Customer 01" readonly><label for="text2">Product ID:</label><input type="text"
 				name="text2" id="text2" readonly value="PRO123"> 
 				<label id="label2">Product name:</label> <select>
 				<option selected value="CISCO">CISCO</option>
@@ -158,7 +134,7 @@
 				<option value="Microsoft">Microsoft</option>
 			</select>
 			<label for="text3">Price/Unit:</label><input type="text"
-				name="text3" id="text3" readonly><label for="text4">Cost/Unit:</label><input type="text" name="text4" id="text4">
+				name="text3" id="text3" readonly value="1 M"><label for="text4">Cost/Unit:</label><input type="text" name="text4" id="text4" readonly value="800000">
 				<div class="ui-grid-b">
 				<div class="ui-block-a">
 					<label id="label3">Qty:</label>
@@ -168,20 +144,21 @@
 			<div>
 			<label
 				for="text5">Discount:</label><input type="text" name="text5"
-				id="text5">
+				id="text5" value="20" readonly>
 				</div><label for="text6">Total Cost:</label><input type="text"
-				name="text6" id="text6" readonly>
+				name="text6" id="text6" readonly value="800000">
 			<div class="ui-grid-a">
 				<div class="ui-block-a">
-					<a href="#dialog (dialog)" data-role="button" id="button15">Approve</a>
+					<a href="#popup2" data-role="button" id="button15">Approve</a>
 				</div>
 				<div class="ui-block-b">
-					<a href="#" data-role="button" id="button16">Cancel</a>
+					<a href="#popup3" data-role="button" id="button16">Cancel</a>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div data-role="dialog" id="dialog">
+	
+	<div data-role="popup" id="popup2">
 		<div data-role="header" id="header8">
 			<h3>Discount!!</h3>
 		</div>
@@ -190,13 +167,22 @@
 			<a href="#Order" data-role="button" id="button19">OK</a>
 		</div>
 	</div>
+	<div data-role="popup" id="popup3">
+		<div data-role="header" id="header8">
+			<h3>Discount!!</h3>
+		</div>
+		<div data-role="content" id="content0">
+			<div data-role="content" id="pageContent8">Discount Decined !!</div>
+			<a href="#ord_new" data-role="button" id="button19">OK</a>
+		</div>
+	</div>
 	<div data-role="page" id="Order">
 		<div data-role="header" id="header2" data-position="fixed">
-			<a href="#home" data-role="button" id="button5">Home</a>
+			<a href="#appoint2" data-role="button" id="button5">Back</a>
 			<h3>Order</h3>
 		</div>
 		<div data-role="content" style="padding: 15px">
-			<a href="#" data-role="button" id="button6">New Order</a><a href="#"
+			<a href="#ord_new" data-role="button" id="button6">New Order</a><a href="#ord_chk"
 				data-role="button" id="button7">Check Order Status</a>
 		</div>
 	</div>
@@ -204,30 +190,30 @@
 		<div data-role="header" id="header3" data-position="fixed">
 			<a href="#Order" data-role="button" id="button8">Back</a>
 			<h3>Check Order Status</h3>
-			<a href="#home" data-role="button" id="button9">Home</a>
 		</div>
 		<div data-role="content" style="padding: 15px">
 			<label for="search" id="label">Order No.:</label><input
-				type="text" name="search" id="search"><label for="search0"
+				type="text" name="search" id="search" value="ORD12345"><label for="search0"
 				id="label0">Customer No.:</label><input type="text" name="search0"
-				id="search0"><label for="search1" id="label1">Customer Name:</label><input
-				type="text" name="search1" id="search1"><div class="ui-grid-a">
-				
-				<div class="ui-block-a" style="position: fixed"><a href="#"
-				data-role="button" id="button10">Search</a></div>
-				<div class="ui-block-b" style="position: fixed">
-					<a href="#" data-role="button" id="button11">Cancel</a>
-				
+				id="search0" value="CUST01"><label for="search1" id="label1">Customer Name:</label><input
+				type="text" name="search1" id="search1">
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<a href="#ord_chk2" data-role="button" id="button">Search</a>
+				</div>
+				<div class="ui-block-b">
+					<a href="#" data-role="button" id="button0">Cancel</a>
 				</div>
 			</div>
-			
+
+
+
 		</div>
 	</div>
 	<div data-role="page" id="ord_chk2">
 		<div data-role="header" id="header4" data-position="fixed">
 			<a href="#ord_chk" data-role="button" id="button12">Back</a>
 			<h3>Order Status</h3>
-			<a href="#Order" data-role="button" id="button13">Home</a>
 		</div>
 		<div data-role="content" style="padding: 15px">
 			<div data-role="content" id="pageContent3">Order No.: ORD12345</div>
