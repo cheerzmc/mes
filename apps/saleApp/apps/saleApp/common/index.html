@@ -1,0 +1,250 @@
+<!DOCTYPE HTML>
+<html>
+    	<head>
+    		<meta charset="UTF-8">
+    		<title>index</title>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="images/favicon.png">
+    		<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    		<link href="jqueryMobile/jquery.mobile.structure-1.4.0.css" rel="stylesheet">
+    		<link href="jqueryMobile/jquery.mobile.inline-svg-1.4.0.min.css" rel="stylesheet">
+    		<link href="jqueryMobile/jquery.mobile.theme-1.4.0.min.css" rel="stylesheet">
+    		<link href="jqueryMobile/jquery.mobile.theme-1.4.0.css" rel="stylesheet">
+    		<link href="jqueryMobile/jquery.mobile.external-png-1.4.0.css" rel="stylesheet">
+    		<link href="jqueryMobile/jquery.mobile.inline-png-1.4.0.css" rel="stylesheet">
+    		<link href="jqueryMobile/jquery.mobile.inline-svg-1.4.0.css" rel="stylesheet">
+    		<link href="jqueryMobile/jquery.mobile-1.4.0.css" rel="stylesheet">
+    		<link href="jqueryMobile/jquery.mobile.inline-png-1.4.0.min.css" rel="stylesheet">
+    		<link href="jqueryMobile/jquery.mobile-1.4.0.min.css" rel="stylesheet">
+    		<link href="jqueryMobile/jquery.mobile.external-png-1.4.0.min.css" rel="stylesheet">
+    		<link href="jqueryMobile/jquery.mobile.structure-1.4.0.min.css" rel="stylesheet">
+    		<link rel="stylesheet" href="css/main.css">
+    		<link rel="stylesheet" href="jqueryMobile/jquery.mobile.icons-1.4.0.css">
+    		<link rel="stylesheet" href="jqueryMobile/jquery.mobile.icons-1.4.0.min.css">
+    		
+    		<script>window.$ = window.jQuery = WLJQ;</script>
+    		<script src="jqueryMobile/jquery.mobile-1.4.0.js"></script>
+    		<script src="jqueryMobile/jquery.mobile-1.4.0.min.js"></script>
+			<script type="text/javascript" src="dojox/mobile/deviceTheme.js"></script>
+			<script type="text/javascript"
+	data-dojo-config="isDebug: false, async: true, parseOnLoad: true, mblHideAddressBar: false"
+	src="dojo/dojo.js"></script>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+</head>
+    	<body>
+    	
+    	
+    		<div data-role="page" id="home">
+				<div data-role="header" id="header" data-position="fixed">
+					<h3>Sale Activity App</h3>
+				</div>
+				<div data-role="content" style="padding: 15px">
+					<a href="#appoint1" data-role="button" id="button">Appointment</a><a href="#Order"
+					data-role="button" id="button0">Order</a>
+					<!--application UI goes here-->	
+    			</div>
+    		</div>
+    		
+	<div data-role="page" id="appoint1">
+		<div data-role="header" id="header0" data-position="fixed">
+			<a href="#home" data-role="button" id="button1">Home</a>
+			<h3>Appointment</h3>
+		</div>
+		<div data-role="content" style="padding: 15px">
+			<ul data-role="listview" id="listview" data-inset="true">
+				<li data-role="list-divider" id="divider">Today</li>
+				<li id="listitem"><a href="#appoint2">10:00 Meeting Cust 1</a></li>
+				<li id="listitem0"><a href="#">13:00 Meeting Cust 2</a></li>
+				<li id="listitem1"><a href="#">15:00 Meeting Cust 3</a></li>
+			</ul>
+		</div>
+	</div>
+	<div data-role="page" id="appoint2">
+		<div data-role="header" id="header1" data-position="fixed">
+			<a href="#appoint1" data-role="button" id="button2">Back</a>
+			<h3>Meeting Cust 1</h3>
+			<a href="#" data-role="button" id="button3">Edit</a>
+		</div>
+		<div data-role="content" style="padding: 15px">
+			<div data-role="content" id="pageContent">
+			Customer Name : Customer 1				
+			</div>
+			<div data-role="content" id="pageContent0"> Time: 10:00 - 12:00 </div>
+			<div data-role="content" id="pageContent1">Where: </div>
+			<img border="0" src="images/thumbnail.png" width="100" height="100">
+			<div data-role="content" id="pageContent2">Description:
+				<textarea id="textarea" readonly>Meeting Customer 1</textarea>
+			</div>
+			<a href="#" data-role="button" id="button4">Check-in</a>
+		</div>
+	</div>
+	<div data-role="dialog" id="dialog_ch">
+		<div data-role="header" id="header6">
+			<h3>Discount Warning!!!</h3>
+		</div>
+		<div data-role="content" id="content">
+			<div data-role="content" id="pageContent7">Please contact your GM</div>
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<a href="#ord_chat" data-role="button" id="button17">Contact</a>
+				</div>
+				<div class="ui-block-b">
+					<a href="#ord_new" data-role="button" id="button18">Cancel</a>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div data-role="page" id="ord_new">
+		<div data-role="header" id="header5" data-position="fixed">
+			<a href="#Order" data-role="button" id="button14">Back</a>
+			<h3>New order</h3>
+		</div>
+		<div data-role="content" style="padding: 15px">
+			<label for="text">Order No.:</label><input type="text" name="text"
+				id="text" readonly value="ORD2345"><label for="text0">Customer No.:</label><input type="text" name="text0" id="text0"><label
+				for="text1">Customer Name:</label><input type="text" name="text1"
+				id="text1"><label for="text2">Product ID:</label><input type="text"
+				name="text2" id="text2"> 
+				<label id="label2">Product name:</label> <select>
+				<option selected value="CISCO">CISCO</option>
+				<option value="ORACLE">ORACLE</option>
+				<option value="IBM">IBM</option>
+				<option value="Microsoft">Microsoft</option>
+			</select>
+			<label for="text3">Price/Unit:</label><input type="text"
+				name="text3" id="text3" readonly><label for="text4">Cost/Unit:</label><input type="text" name="text4" id="text4">
+				<div class="ui-grid-b">
+				<div class="ui-block-a">
+					<label id="label3">Qty:</label>
+				</div>
+				<div class="ui-block-b"><div data-dojo-type="dojox.mobile.ValuePickerSlot"></div></div>
+				<div class="ui-block-c">
+					<div data-dojo-type="dojox.mobile.ValuePickerSlot"></div>
+				</div>
+			</div>
+			<div data-dojo-type="dojox.mobile.ValuePicker">
+				
+			</div>
+			<label
+				for="text5">Discount:</label><input type="text" name="text5"
+				id="text5"><label for="text6">Total Cost:</label><input type="text"
+				name="text6" id="text6" readonly>
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<a href="#dialog_ch (dialog)" data-role="button" id="button15">Submit</a>
+				</div>
+				<div class="ui-block-b">
+					<a href="#" data-role="button" id="button16">Cancel</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="ord_chat">
+		<div data-role="header" id="header7" data-position="fixed">
+			<h3>Request Discount</h3>
+		</div>
+		<div data-role="content" style="padding: 15px">
+			<label for="text">Order No.:</label><input type="text" name="text"
+				id="text" readonly value="ORD2345"><label for="text0">Customer No.:</label><input type="text" name="text0" id="text0" value="CUST01"><label
+				for="text1">Customer Name:</label><input type="text" name="text1"
+				id="text1" value="Customer 01"><label for="text2">Product ID:</label><input type="text"
+				name="text2" id="text2" readonly value="PRO123"> 
+				<label id="label2">Product name:</label> <select>
+				<option selected value="CISCO">CISCO</option>
+				<option value="ORACLE">ORACLE</option>
+				<option value="IBM">IBM</option>
+				<option value="Microsoft">Microsoft</option>
+			</select>
+			<label for="text3">Price/Unit:</label><input type="text"
+				name="text3" id="text3" readonly><label for="text4">Cost/Unit:</label><input type="text" name="text4" id="text4">
+				<div class="ui-grid-b">
+				<div class="ui-block-a">
+					<label id="label3">Qty:</label>
+				</div>
+				<div class="ui-block-b"><label id="label3"> 2 </label></div>
+			</div>
+			<div>
+			<label
+				for="text5">Discount:</label><input type="text" name="text5"
+				id="text5">
+				</div><label for="text6">Total Cost:</label><input type="text"
+				name="text6" id="text6" readonly>
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<a href="#dialog (dialog)" data-role="button" id="button15">Approve</a>
+				</div>
+				<div class="ui-block-b">
+					<a href="#" data-role="button" id="button16">Cancel</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div data-role="dialog" id="dialog">
+		<div data-role="header" id="header8">
+			<h3>Discount!!</h3>
+		</div>
+		<div data-role="content" id="content0">
+			<div data-role="content" id="pageContent8">Discount Approved !!</div>
+			<a href="#Order" data-role="button" id="button19">OK</a>
+		</div>
+	</div>
+	<div data-role="page" id="Order">
+		<div data-role="header" id="header2" data-position="fixed">
+			<a href="#home" data-role="button" id="button5">Home</a>
+			<h3>Order</h3>
+		</div>
+		<div data-role="content" style="padding: 15px">
+			<a href="#" data-role="button" id="button6">New Order</a><a href="#"
+				data-role="button" id="button7">Check Order Status</a>
+		</div>
+	</div>
+	<div data-role="page" id="ord_chk">
+		<div data-role="header" id="header3" data-position="fixed">
+			<a href="#Order" data-role="button" id="button8">Back</a>
+			<h3>Check Order Status</h3>
+			<a href="#home" data-role="button" id="button9">Home</a>
+		</div>
+		<div data-role="content" style="padding: 15px">
+			<label for="search" id="label">Order No.:</label><input
+				type="text" name="search" id="search"><label for="search0"
+				id="label0">Customer No.:</label><input type="text" name="search0"
+				id="search0"><label for="search1" id="label1">Customer Name:</label><input
+				type="text" name="search1" id="search1"><div class="ui-grid-a">
+				
+				<div class="ui-block-a" style="position: fixed"><a href="#"
+				data-role="button" id="button10">Search</a></div>
+				<div class="ui-block-b" style="position: fixed">
+					<a href="#" data-role="button" id="button11">Cancel</a>
+				
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	<div data-role="page" id="ord_chk2">
+		<div data-role="header" id="header4" data-position="fixed">
+			<a href="#ord_chk" data-role="button" id="button12">Back</a>
+			<h3>Order Status</h3>
+			<a href="#Order" data-role="button" id="button13">Home</a>
+		</div>
+		<div data-role="content" style="padding: 15px">
+			<div data-role="content" id="pageContent3">Order No.: ORD12345</div>
+		
+		<div data-role="content" id="pageContent4">
+			Customer No.: CUST01
+		</div>
+		<div data-role="content" id="pageContent5">
+		Customer Name: Customer 01
+		</div>
+		<div data-role="content" id="pageContent6">
+		Status: Pack
+		</div>
+		</div>
+	</div>
+	<script src="js/initOptions.js"></script>
+    		<script src="js/main.js"></script>
+    		<script src="js/messages.js"></script>
+    	</body>
+</html>
